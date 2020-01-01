@@ -25,7 +25,7 @@ SECRET_KEY = '1klvhvke&@b4we=wn)em(s9z9_xp$z!34_i^@$7f$+3$r0f41l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
     'width': 1120,
