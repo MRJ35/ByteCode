@@ -1,0 +1,29 @@
+<head>
+   {% load static %}
+   <link href="{% static 'tinymce/css/prism.css' %}" rel = "stylesheet">
+   <link href="{% static 'main/css/materialize.css' %}" rel = "stylesheet">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+   <!-- {% for t in tutorials %}
+      <p>{{t.published_date}}</p>
+      <p>{{t.tutorial_title}}</p>
+      <p>{{t.tutorial_content|safe}}</p>
+      <br><br>
+   {% endfor %} -->
+
+   {% include "main/includes/navbar.html" %}
+
+   {% include "main/includes/messages.html" %}  
+   <div class="container">
+      <br>
+      {% block content %}
+      {% endblock %}
+   </div>
+   
+
+</body>
+<script src ="{% static 'tinymce/js/prism.js' %}"></script>
+<script>M.AutoInit();</script>
